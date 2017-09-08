@@ -4,10 +4,10 @@ def moonbox(str_list):
     cnt = 0
     message = ""
 
-    for str in all:
-        num_strings = strings.count(str)
+    for string in all:
+        num_strings = strings.count(string)
         if num_strings > cnt:
-            message = str
+            message = string
             cnt = num_strings
     print(message)
     print(cnt)
