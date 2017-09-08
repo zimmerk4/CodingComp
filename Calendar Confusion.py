@@ -13,8 +13,10 @@ def calendarize(line):
     for mdy in new_form_tup:  # Locates the index of the required mm, dd, or yyyy and pulls its value from the date
         new_date.append(cur_date_tup[cur_form_tup.index(mdy)])
     print(new_delim.join(new_date))  # Prints the new date joined by the new delimiter
+    return new_delim.join(new_date)
 
 
-with open("calendar.txt") as cal:
+with open("calendar.txt") as cal, open("out.txt", "w") as out:
     for line in cal:
-        calendarize(line)
+        out.write(calendarize(line) + "\n")
+
